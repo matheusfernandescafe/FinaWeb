@@ -2,7 +2,7 @@
 using Fina.Core.Requests.Categories;
 using Fina.Core.Responses;
 
-namespace Fina.Core.Handler;
+namespace Fina.Core.Handlers;
 
 public interface ICategoryHandler : IBaseHandler<
     CreateCategoryRequest,
@@ -11,5 +11,5 @@ public interface ICategoryHandler : IBaseHandler<
     GetCategoryByIdRequest,
     Category>
 {
-    Task<PagedResponse<List<Category>?>> GetAllAsync(GetAllCategoryRequest request);
+    Task<PagedResponse<List<Category>?>> GetAllAsync(GetAllCategoriesRequest request);
 }

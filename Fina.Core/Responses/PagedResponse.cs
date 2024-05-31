@@ -2,7 +2,7 @@
 
 namespace Fina.Core.Responses;
 
-public class PagedResponse<TData> : BaseResponse<TData>
+public class PagedResponse<TData> : Response<TData>
 {
     [JsonConstructor]
     public PagedResponse(

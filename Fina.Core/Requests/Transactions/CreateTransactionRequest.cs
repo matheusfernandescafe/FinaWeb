@@ -18,5 +18,5 @@ public class CreateTransactionRequest : BaseRequest
     public long CategoryId { get; set; }
 
     [Required(ErrorMessage = "Date inválida")]
-    public DateTime? PaidOrReceiveddAt { get; set; }
+    public DateTime? PaidOrReceivedAt { get; set; }
 }

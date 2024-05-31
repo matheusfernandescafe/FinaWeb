@@ -2,15 +2,15 @@
 
 namespace Fina.Core.Responses;
 
-public class BaseResponse<TData>
+public class Response<TData>
 {
     private int _code = Configuration.DefaultStatusCode;
 
     [JsonConstructor]
-    public BaseResponse()
+    public Response()
         => _code = Configuration.DefaultStatusCode;
 
-    public BaseResponse(
+    public Response(
         TData? data,
         int code = 200,
         string? message = null)

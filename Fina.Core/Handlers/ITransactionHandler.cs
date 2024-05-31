@@ -2,7 +2,7 @@
 using Fina.Core.Requests.Transactions;
 using Fina.Core.Responses;
 
-namespace Fina.Core.Handler;
+namespace Fina.Core.Handlers;
 
 public interface ITransactionHandler : IBaseHandler<
     CreateTransactionRequest,
@@ -11,5 +11,5 @@ public interface ITransactionHandler : IBaseHandler<
     GetTransactionByIdRequest,
     Transaction>
 {
-    Task<PagedResponse<List<Transaction>?>> GetByPeriodAsync(GetTransactionByPeriodRequest request);
+    Task<PagedResponse<List<Transaction>?>> GetByPeriodAsync(GetTransactionsByPeriodRequest request);
 }
