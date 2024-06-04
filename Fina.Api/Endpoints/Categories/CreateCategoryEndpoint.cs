@@ -1,4 +1,4 @@
-﻿using Fina.Api.Common.Api;
+using Fina.Api.Common.Api;
 using Fina.Core.Handlers;
 using Fina.Core.Models;
 using Fina.Core.Requests.Categories;
@@ -14,7 +14,7 @@ public class CreateCategoryEndpoint : IEndpoint
             .WithSummary("Cria uma nova categoria")
             .WithDescription("Cria uma nova categoria")
             .WithOrder(1)
-            .Produces<Response<Category>>();
+            .Produces<Response<Category?>>();
 
     private static async Task<IResult> HandleAsync(
         ICategoryHandler handler,

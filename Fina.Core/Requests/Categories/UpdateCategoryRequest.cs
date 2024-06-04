@@ -1,8 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace Fina.Core.Requests.Categories;
 
-public class UpdateCategoryRequest : BaseRequest
+public class UpdateCategoryRequest : Request
 {
     public long Id { get; set; }
 
@@ -11,5 +11,5 @@ public class UpdateCategoryRequest : BaseRequest
     public string Title { get; set; } = string.Empty;
 
     [Required(ErrorMessage = "Descrição inválida")]
-    public string Description { get; set; } = string.Empty;
+    public string? Description { get; set; }
 }

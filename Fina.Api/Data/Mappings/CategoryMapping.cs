@@ -1,4 +1,4 @@
-﻿using Fina.Core.Models;
+using Fina.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -13,7 +13,7 @@ public class CategoryMapping : IEntityTypeConfiguration<Category>
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.Title)
-            .IsRequired()
+            .IsRequired(true)
             .HasColumnType("NVARCHAR")
             .HasMaxLength(80);
 
@@ -23,7 +23,7 @@ public class CategoryMapping : IEntityTypeConfiguration<Category>
             .HasMaxLength(255);
 
         builder.Property(x => x.UserId)
-            .IsRequired()
+            .IsRequired(true)
             .HasColumnType("VARCHAR")
             .HasMaxLength(160);
     }

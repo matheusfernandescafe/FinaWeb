@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 
 namespace Fina.Core.Responses;
 
@@ -9,10 +9,10 @@ public class Response<TData>
     [JsonConstructor]
     public Response()
         => _code = Configuration.DefaultStatusCode;
-
+    
     public Response(
         TData? data,
-        int code = 200,
+        int code = Configuration.DefaultStatusCode,
         string? message = null)
     {
         Data = data;

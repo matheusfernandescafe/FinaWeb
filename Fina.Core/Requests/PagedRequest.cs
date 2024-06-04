@@ -1,6 +1,6 @@
-﻿namespace Fina.Core.Requests;
+namespace Fina.Core.Requests;
 
-public class PagedRequest : BaseRequest
+public abstract class PagedRequest : Request
 {
     public int PageSize { get; set; } = Configuration.DefaultPageSize;
     public int PageNumber { get; set; } = Configuration.DefaultPageNumber;

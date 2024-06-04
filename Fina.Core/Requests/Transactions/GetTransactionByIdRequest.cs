@@ -1,6 +1,6 @@
-﻿namespace Fina.Core.Requests.Transactions;
+namespace Fina.Core.Requests.Transactions;
 
-public class GetTransactionByIdRequest : BaseRequest
+public class GetTransactionByIdRequest : Request
 {
     public long Id { get; set; }
 }
